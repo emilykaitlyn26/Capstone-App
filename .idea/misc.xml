@@ -3,12 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_comet_chat_client.xml" value="0.17135416666666667" />
         <entry key="app/src/main/res/layout/activity_launch.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25777587890625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12407407407407407" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2054412841796875" />
         <entry key="uikit/src/main/res-components/calls/layout/activity_cometchat_callmanager.xml" value="0.12791290283203127" />
+        <entry key="uikit/src/main/res-components/calls/layout/activity_cometchat_start_call.xml" value="0.13854166666666667" />
+        <entry key="uikit/src/main/res-components/calls/layout/cometchat_call_history_row.xml" value="0.13854166666666667" />
+        <entry key="uikit/src/main/res-components/calls/layout/cometchat_call_list_row.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/calls/layout/fragment_cometchat_all_call.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/calls/layout/fragment_cometchat_calls.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/calls/layout/fragment_cometchat_missed_call.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/messagebubbles/layout/thread_message_video_item.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/messages/layout/cometchat_join_ongoing_call_view.xml" value="0.17135416666666667" />
+        <entry key="uikit/src/main/res-components/messages/layout/messages_shimmer.xml" value="0.17135416666666667" />
         <entry key="uikit/src/main/res-components/others/layout/activity_screen.xml" value="0.1" />
+        <entry key="uikit/src/main/res-components/others/layout/stickers_row.xml" value="0.17135416666666667" />
       </map>
     </option>
   </component>

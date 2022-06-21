@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,14 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+
+import java.io.IOException;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -99,12 +108,28 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Issue with login", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                ParseUser parseUser = ParseUser.getCurrentUser();
+                String UID = parseUser.getObjectId();
+
+                if (CometChat.getLoggedInUser() == null) {
+                    CometChat.login(UID, authKey, new CometChat.CallbackListener<User>() {
+                        @Override
+                        public void onSuccess(User user) {
+                            Log.d(TAG, "Login Successful : " + user.toString());
+                        }
+
+                        @Override
+                        public void onError(CometChatException e) {
+                            Log.d(TAG, "Login failed with exception: " + e.getMessage());
+                        }
+                    });
+                }
                 goMainActivity();
                 Toast.makeText(LoginActivity.this, "Success", Toast.LENGTH_SHORT).show();
             }
         });
 
-        ParseUser parseUser = ParseUser.getCurrentUser();
+        /*ParseUser parseUser = ParseUser.getCurrentUser();
         String UID = parseUser.KEY_OBJECT_ID;
 
         if (CometChat.getLoggedInUser() == null) {
@@ -120,6 +145,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             });
         } else {
-        }
+            goMainActivity();
+        }*/
     }
 }
